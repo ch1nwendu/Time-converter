@@ -1,0 +1,41 @@
+def hours_to_minutes(hours):
+    return hours * 60
+
+def days_to_hours(days):
+    return days * 24
+
+def minutes_to_hours(minutes):
+    return minutes / 60
+
+def hours_to_days(hours):
+    return hours / 24
+
+# Display the options to the user
+print("Please choose an option:")
+print("1. Convert hours to minutes")
+print("2. Convert days to hours")
+print("3. Convert minutes to hours")
+print("4. Convert hours to days")
+
+# Get the user's choice
+choice = int(input("Enter your choice (1/2/3/4): "))
+
+# Perform the appropriate conversion based on the user's choice
+if choice == 1:
+    hours = int(input("Enter the number of hours: "))
+    minutes = hours_to_minutes(hours)
+    print(f"{hours} hours is equal to {minutes} minutes.")
+elif choice == 2:
+    days = int(input("Enter the number of days: "))
+    hours = days_to_hours(days)
+    print(f"{days} days is equal to {hours} hours.")
+elif choice == 3:
+    minutes = int(input("Enter the number of minutes: "))
+    hours = minutes_to_hours(minutes)
+    print(f"{minutes} minutes is equal to {hours} hours.")
+elif choice == 4:
+    hours = int(input("Enter the number of hours: "))
+    days = hours_to_days(hours)
+    print(f"{hours} hours is equal to {days} days.")
+else:
+    print("Invalid choice. Please choose again.")
